@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>G2 Airline - Airline Ticket Reservation by Group 2 of 2SE1</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Group 2 of 2SE1 - Alfiansyah, Rafi Fajar Sulaiman and Wahyu Agung Utomo">
+        <meta name="charset" content="UTF-8">
+        <meta name="description" content="G2 Airline is Dedicated To Reserve Your Flight">
+        <link rel="stylesheet" type="text/css" href="../assets/css/home.css">
+        <link rel="stylesheet" type="text/css" href="../assets/css/main.css">
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="shortcut icon" href="../assets/img/Icons/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="../assets/img/Icons/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+        <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+        <!-- Navbar -->
+        <div class="wrapper" id="wrapper">
+            <nav>
+                <div class="container-flex">
+                    <div class="brand">
+                        <a href="home.html">G2 Airline</a>
+                    </div>
+                    <div class="burger">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
+                    <div class="bg-sidebar"></div>
+                    <ul class="sidebar">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li>
+                            <a href="#wrapper" id="nav-login">Login</a>
+                            <div id="login-panel">
+                                <form action="" class="login-form">
+                                    <label for="email">Email</label><br>
+                                    <input type="email" name="email" id="email" placeholder="example@gmail.com">
+                                    <label for="password">Password</label><br>
+                                    <input type="password" name="password" id="password" placeholder="Password"><br>
+                                    <div class="btn-group">
+                                        <div class="col-4">
+                                            <button type="submit">Login</button>
+                                        </div>
+                                        <div class="col-4">
+                                            <p>Don't have an account?</p>    
+                                        </div>
+                                        <div class="col-4 text-right">
+                                            <a href="register.html"><button>Register</button></a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <script src="../assets/js/navbar.js"></script>
+        </div>
+
+        <!-- Slideshow -->
+        <div class="slideshow-background">
+            <div class="container slideshow">
+                <img src="/../assets/img/Airline_ads(1).jpg" alt="Airline Ad(1)" class="slideshow-img" id="img-1">
+                <img src="/../assets/img/Airline_ads(2).jpg" alt="Airline Ad(2)" class="slideshow-img" id="img-2">
+                <img src="/../assets/img/Airline_ads(3).jpg" alt="Airline Ad(3)" class="slideshow-img" id="img-3">
+            </div>
+        </div>
+
+        <!-- Search Box -->
+        <div class="container search-box" id="search-box">
+            <div class="header">
+                <h2 class="text">Hello there!</h2>
+                <h1 class="text">Are you looking to travel somewhere?</h1>
+            </div>
+            <div class="promo-group">
+                <div class="row">
+                    <div class="col-1">
+                        <h1 class="text"><i class='bx bxs-plane-alt' style="color: blue;"></i></h1>
+                    </div>
+                    <div class="col-11">
+                        <h2 class="text">Look for promos & cheap ticket prices <a href="">here</a>!!!</h2>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <label for="trip-choice">
+                            <input type="radio" id="trip-choice"  name="trip-choice" checked> Single-Trip
+                        </label>
+                </div>
+            </div>
+            <div class="search-group">
+                <form action="" onSubmit="event.preventDefault();">
+                    <div class="col-2_5 from-to" id="from">
+                        <label for="from-city" class="text-gray label-form">From</label><br>
+                        <input type="text" id="from-city" name="from-city" placeholder="From City or Airport" onclick="displayListsFrom()" required><br>
+                        <div class="container-lists" id="from-city-list">
+                            <input type="text" placeholder="City or Airport" disabled>
+                            <button class="btn-cities-from">Jakarta, Indonesia</button>
+                            <button class="btn-cities-from">Surabaya, Indonesia</button>
+                            <button class="btn-cities-from">Medan, Indonesia</button>
+                            <button class="btn-cities-from">Makassar, Indonesia</button>
+                            <button class="btn-cities-from">Yogyakarta, Indonesia</button>
+                            <button class="btn-cities-from">Denpasar-Bali, Indonesia</button>
+                            <button class="btn-cities-from">Padang, Indonesia</button>
+                            <button class="btn-cities-from">Palembang, Indonesia</button>
+                            <button class="btn-cities-from">Banjarmasin, Indonesia</button>
+                            <button class="btn-cities-from">Pontianak, Indonesia</button>
+                        </div>
+                    </div>
+                    <div class="col-2_5 from-to">
+                        <label for="to-city" class="text-gray label-form">To</label><br>
+                        <input type="text" name="to-city" id="to-city" placeholder="To City or Airport" onclick="displayListsTo()" required>
+                        <div class="container-lists" id="to-city-list">
+                            <input type="text" placeholder="City or Airport" disabled>
+                            <button class="btn-cities-to">Jakarta, Indonesia</button>
+                            <button class="btn-cities-to">Surabaya, Indonesia</button>
+                            <button class="btn-cities-to">Medan, Indonesia</button>
+                            <button class="btn-cities-to">Makassar, Indonesia</button>
+                            <button class="btn-cities-to">Yogyakarta, Indonesia</button>
+                            <button class="btn-cities-to">Denpasar-Bali, Indonesia</button>
+                            <button class="btn-cities-to">Padang, Indonesia</button>
+                            <button class="btn-cities-to">Palembang, Indonesia</button>
+                            <button class="btn-cities-to">Banjarmasin, Indonesia</button>
+                            <button class="btn-cities-to">Pontianak, Indonesia</button>
+                        </div>
+                    </div>
+                    <div class="col-2_25 departure-arrival">
+                        <label for="departure-date" class="text-gray label-form">Depart Date</label><br>
+                        <input type="date" name="departure-date" id="departure-date">
+                    </div>
+                    <div class="col-2_25 departure-arrival">
+                        <input type="checkbox" id="return-date-check" name="return-date-check" class="checkbox" onclick="returnFlight()">
+                        <label for="return-date-check" class="text-gray label-form"> Return Date</label><br>
+                        <input type="date" name="return-date" id="return-date" disabled>
+                    </div>
+                    <div class="col-2_5 passenger-class" onclick="displayListsPass()">
+                        <label for="passenger-seat-class" class="text-gray label-form">Passenger, Seat Class</label><br>
+                        <input type="text" id="passenger-seat-class" placeholder="1 Passenger, Economy" onclick="displayListsPass()" disabled>
+                        <div class="container-lists" id="passenger-list">
+                            <input type="text" placeholder="City or Airport" disabled>
+                            <div class="col-6" id="passenger-count">
+                                <div class="row">
+                                    <div class="col-2 text-center">
+                                        <button class="btn-decrease">-</button>
+                                    </div>
+                                    <div class="col-8 text-center">
+                                        <p>Adult</p>
+                                    </div>
+                                    <div class="col-2 text-center">
+                                        <button class="btn-increase">+</button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-2 text-center">
+                                        <button class="btn-decrease">-</button>
+                                    </div>
+                                    <div class="col-8 text-center">
+                                        <p>Child</p>
+                                    </div>
+                                    <div class="col-2 text-center">
+                                        <button class="btn-increase">+</button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-2 text-center">
+                                        <button class="btn-decrease">-</button>
+                                    </div>
+                                    <div class="col-8 text-center">
+                                        <p>Infant</p>
+                                    </div>
+                                    <div class="col-2 text-center">
+                                        <button class="btn-increase">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6" id="seat-class">
+                                <button class="seat-class-list">Economy</button>
+                                <button class="seat-class-list">Premium Economy</button>
+                                <button class="seat-class-list">Business</button>
+                                <button class="seat-class-list">First Class</button>
+                                <div class="col-6 text-center">
+                                    <button class="btn-reset" onclick="resetPassSeatClass()">Reset</button>
+                                </div>
+                                <div class="col-6 text-center">
+                                    <button class="btn-done" onclick="submitPassSeatClass()">Done</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="footer">
+                <a href="result_remake.html"><button type="submit" class="btn-submit" disabled>Search</button></a>
+            </div>
+        </div>
+
+        <!-- Main Background -->
+        <div class="main-background"></div>
+    </body>
+
+    <footer class="footer-distributed" id="blog">
+
+        <div class="footer-left">
+            <img src="../assets/img/garuda_indonesia.png">
+            <h3>G2<span>Airline</span></h3>
+
+            <p class="footer-links">
+                <a href="home.html">Home</a> |
+                <a href="#blog">Blog</a> |
+                <a href="#about">About</a> |
+                <a href="#contact">Contact</a>
+            </p>
+
+            <p class="footer-company-name">©2022 - Made With Love</p>
+        </div>
+
+        <div class="footer-center" id="contact">
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>Gedung Enginering Center Lt. 1,
+                    FTUI Kampus Baru UI Depok,</span> Kukusan, Kecamatan Beji, Kota Depok, Jawa Barat 16425</p>
+            </div>
+
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>(021) 7863508</p>
+            </div>
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="https://ccit.eng.ui.ac.id/">g2airline@gmail.com</a></p>
+            </div>
+        </div>
+        <div class="footer-right">
+            <p class="footer-company-about" id="about">
+                <span>About the company</span> We are an airline that has existed since ancient times, but still cannot be trusted by the public and still does not want to develop</p>
+            <div class="footer-icons">
+                <a href="https://id-id.facebook.com/"><i class="fa fa-facebook"></i></a>
+                <a href="https://twitter.com/perogeremmer"><i class="fa fa-twitter"></i></a>
+                <a href="https://www.instagram.com/?hl=id"><i class="fa fa-instagram"></i></a>
+                <a href="https://id.linkedin.com/"><i class="fa fa-linkedin"></i></a>
+                <a href="https://www.youtube.com/?hl=ID"><i class="fa fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="../assets/js/home.js"></script>
+
+</html>
