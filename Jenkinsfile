@@ -13,7 +13,7 @@ pipeline {
             steps {
                 echo "Testing.."
                 sh '''
-                docker build -t g2-airline-image .
+                docker build -t g2airline-image .
                 '''
             }
         }
