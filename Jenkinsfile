@@ -1,5 +1,9 @@
 pipeline {
-    agent any
+    agent {
+        node {
+            label 'docker-agent-alpine'
+        }
+    }
     stages {
         stage('Build') {
             steps {
@@ -13,7 +17,7 @@ pipeline {
             steps {
                 echo "Testing.."
                 sh '''
-                sudo docker build -t g2airline-image .
+                docker build -t g2airline-image .
                 '''
             }
         }
@@ -21,7 +25,7 @@ pipeline {
             steps {
                 echo 'Deliver....'
                 sh '''
-                sudo docker run -d -p 8081:80 --name g2airline-statis-container
+                docker run -d -p 8081:80 --name g2airline-statis-container
                 '''
             }
         }
