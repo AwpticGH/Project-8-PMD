@@ -13,7 +13,7 @@ pipeline {
             steps {
                 echo "Testing.."
                 sh '''
-                docker build -t g2airline-image .
+                sudo docker build -t g2airline-image .
                 '''
             }
         }
@@ -21,7 +21,7 @@ pipeline {
             steps {
                 echo 'Deliver....'
                 sh '''
-                docker run -d -p 8081:80 --name g2airline-statis-container
+                sudo docker run -d -p 8081:80 --name g2airline-statis-container
                 '''
             }
         }
