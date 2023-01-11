@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        docker
+        none
     }
     stages {
         stage('Build') {
