@@ -1,15 +1,15 @@
 pipeline {
-    agent { 
+    agent {
         node {
-            label 'docker-agent'
-            }
-      }
+            label 'docker-agent-alpine'
+        }
+    }
     stages {
         stage('Build') {
             steps {
                 echo "Building.."
                 sh '''
-                docker build -t g2-airline-image .
+                ls
                 '''
             }
         }
@@ -17,7 +17,7 @@ pipeline {
             steps {
                 echo "Testing.."
                 sh '''
-                docker run -d -p 8081:80 --name g2airline-statis-container
+                docker build -t g2airline-image .
                 '''
             }
         }
@@ -25,7 +25,7 @@ pipeline {
             steps {
                 echo 'Deliver....'
                 sh '''
-                echo "Success"
+                docker run -d -p 8081:80 --name g2airline-statis-container
                 '''
             }
         }
